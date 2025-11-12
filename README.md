@@ -1,4 +1,4 @@
-# 🩺 Drishti AI - TB Detection App# Drishti AI - Mobile TB Detection App# Project Drishti - TB Detection Mobile App
+# 🩺 Drishti AI - TB Detection App# 🩺 Drishti AI - TB Detection App# Drishti AI - Mobile TB Detection App# Project Drishti - TB Detection Mobile App
 
 
 
@@ -6,225 +6,453 @@
 
 
 
+![Drishti AI](https://img.shields.io/badge/Drishti%20AI-TB%20Detection-blue?style=for-the-badge)<div align="center">
+
+![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)
+
+![Platform](https://img.shields.io/badge/Platform-Android-lightgrey?style=for-the-badge&logo=android)
+
+![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+
 ![Drishti AI Logo](https://img.shields.io/badge/Drishti-AI%20Powered-blue?style=for-the-badge&logo=flutter)AI-powered mobile application for tuberculosis screening from chest X-rays. Works 100% offline on Android and iOS devices.## Overview
+
+**AI-powered mobile app to close the TB diagnostic gap in Bangladesh**
 
 ![Version](https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge)
 
+*Instant offline chest X-ray analysis using deep learning with bilingual support (English/বাংলা)*
+
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)Project Drishti is a Flutter-based mobile application for detecting Tuberculosis (TB) from chest X-ray images using AI/ML. The app currently uses a mock model strategy, ready to be integrated with a real TFLite model when available.
-
-![Platform](https://img.shields.io/badge/platform-Android-lightgrey?style=for-the-badge&logo=android)
-
-## Features
-
-**Project Drishti: An AI-powered Flutter app to close the TB diagnostic gap in Bangladesh**
-
-## Features
-
-*Instant, offline chest X-ray analysis using deep learning (EfficientNetV2) with bilingual support*
-
-- **Offline TB Detection**: Analyzes chest X-rays without internet connection- 🌍 **Multi-Language Support**: English and Bengali (বাংলা)
-
-[📥 Download APK](#-download--installation) | [📖 Features](#-features) | [🚀 Quick Start](#-quick-start) | [📸 Screenshots](#-app-screenshots) | [🤝 Contributing](#-contributing)
-
-- **Real-time Analysis**: Results in ~40 seconds with progress tracking- 📸 **Image Capture & Upload**: Camera or gallery integration
 
 </div>
 
+![Platform](https://img.shields.io/badge/platform-Android-lightgrey?style=for-the-badge&logo=android)
+
+---
+
+## Features
+
+## 📥 Download APK
+
+**Project Drishti: An AI-powered Flutter app to close the TB diagnostic gap in Bangladesh**
+
+Click on any APK below to download directly:
+
+## Features
+
+### 🎯 Recommended for Most Phones
+
+**[📥 Download app-arm64-v8a-release.apk (89.7 MB)](APK/app-arm64-v8a-release.apk)**  *Instant, offline chest X-ray analysis using deep learning (EfficientNetV2) with bilingual support*
+
+✅ For modern Android phones (2018 and newer)
+
+- **Offline TB Detection**: Analyzes chest X-rays without internet connection- 🌍 **Multi-Language Support**: English and Bengali (বাংলা)
+
+### 📱 For Older Phones
+
+**[📥 Download app-armeabi-v7a-release.apk (87.7 MB)](APK/app-armeabi-v7a-release.apk)**  [📥 Download APK](#-download--installation) | [📖 Features](#-features) | [🚀 Quick Start](#-quick-start) | [📸 Screenshots](#-app-screenshots) | [🤝 Contributing](#-contributing)
+
+✅ For older 32-bit Android devices
+
+- **Real-time Analysis**: Results in ~40 seconds with progress tracking- 📸 **Image Capture & Upload**: Camera or gallery integration
+
+### 💻 For Emulators
+
+**[📥 Download app-x86_64-release.apk (90.8 MB)](APK/app-x86_64-release.apk)**  </div>
+
+✅ For Android emulators and Intel-based devices
+
 - **AI-Powered**: Deep learning model for accurate TB screening- 🔬 **TB Analysis**: Mock AI inference with probability, risk level, and confidence scores
+
+> 💡 **Not sure which one to download?** Choose the **arm64-v8a** version - it works on most phones!
+
+---
 
 ---
 
 - **Heatmap Visualization**: Shows which lung regions the AI focused on- 🩺 **X-Ray Validation**: Automatic validation to ensure uploaded images are X-rays
 
+## 🚀 Quick Installation Guide
+
 ## 📋 Table of Contents
 
-- **PDF Reports**: Downloadable medical reports with recommendations- 💬 **AI Chat Assistant**: Floating chat widget powered by Google Gemini AI (with medical disclaimers)
+### Step 1: Download
 
-- [About](#-about)
+Click the download link above for your device type.- **PDF Reports**: Downloadable medical reports with recommendations- 💬 **AI Chat Assistant**: Floating chat widget powered by Google Gemini AI (with medical disclaimers)
+
+
+
+### Step 2: Enable Unknown Sources- [About](#-about)
+
+Before installing, you need to allow installation from unknown sources:
 
 - [Features](#-features)- **Multi-language**: Supports English and Bengali (বাংলা)- 🎨 **Heatmap Visualization**: Grad-CAM placeholder overlay
 
-- [Download & Installation](#-download--installation)
+**For Android 8.0 and above:**
 
-- [App Screenshots](#-app-screenshots)- **Patient Management**: History tracking and record keeping- 📄 **Report Generation**: Save detailed analysis reports to device storage
+1. Open **Settings**- [Download & Installation](#-download--installation)
+
+2. Go to **Security & Privacy** → **Install unknown apps**
+
+3. Select your **browser** or **file manager**- [App Screenshots](#-app-screenshots)- **Patient Management**: History tracking and record keeping- 📄 **Report Generation**: Save detailed analysis reports to device storage
+
+4. Toggle **Allow from this source** to ON
 
 - [Report Examples](#-report-examples)
 
-- [Technology Stack](#-technology-stack)- 🎨 **Modern UI**: Material Design 3 with smooth animations and floating widgets
+**For Android 7.1 and below:**
 
-- [How It Works](#-how-it-works)
+1. Open **Settings**- [Technology Stack](#-technology-stack)- 🎨 **Modern UI**: Material Design 3 with smooth animations and floating widgets
+
+2. Go to **Security**
+
+3. Enable **Unknown sources**- [How It Works](#-how-it-works)
+
+4. Tap **OK** to confirm
 
 - [Usage Guide](#-usage-guide)## Installation- 🌐 **Cross-Platform**: Runs on Web, Android, iOS, Windows, macOS, and Linux
 
-- [Privacy & Security](#-privacy--security)
+### Step 3: Install
 
-- [Contributing](#-contributing)
+1. Open your **Downloads** folder- [Privacy & Security](#-privacy--security)
+
+2. Tap on the downloaded APK file
+
+3. Tap **Install**- [Contributing](#-contributing)
+
+4. Tap **Open** when installation completes
 
 - [License](#-license)
 
-- [Contact](#-contact)### Android## Project Structure
+### Step 4: Grant Permissions
+
+The app will ask for:- [Contact](#-contact)### Android## Project Structure
+
+- 📷 **Camera** - To capture X-ray images
+
+- 📁 **Storage** - To save PDF reports
 
 
 
----1. Download `app-arm64-v8a-release.apk` from releases```
+These permissions are required for the app to work.---1. Download `app-arm64-v8a-release.apk` from releases```
 
 
-
-## 🌟 About2. Enable "Install from Unknown Sources" in phone settingslib/
-
-
-
-**Drishti AI** is a revolutionary mobile application designed to address the tuberculosis (TB) diagnostic gap in Bangladesh and other resource-limited settings. The app provides **instant, offline chest X-ray analysis** using state-of-the-art deep learning technology, making TB screening accessible even in remote areas without internet connectivity.3. Install the APK├── l10n/
-
-
-
-### Why Drishti AI?4. Grant camera and storage permissions when prompted│   ├── app_en.arb          # English translations
-
-
-
-- 🏥 **Accessibility**: Works completely offline - no internet required│   └── app_bn.arb          # Bengali translations
-
-- ⚡ **Speed**: Get results in seconds, not days
-
-- 🎯 **Accuracy**: Powered by EfficientNetV2 deep learning model### iOS├── providers/
-
-- 🌍 **Bilingual**: Supports English and Bengali (বাংলা)
-
-- 💰 **Free**: No cost for screening1. Download `Drishti-TB-AI.ipa` from releases│   └── language_provider.dart   # Language state management
-
-- 📊 **Comprehensive**: Generates detailed PDF reports
-
-- 🤖 **AI Assistant**: Integrated Gemini AI for medical queries2. Install using TestFlight or Xcode (requires developer account)├── screens/
-
-
-
----3. Grant camera and photo library permissions when prompted│   ├── home_screen.dart         # Main screen with upload/capture options
-
-
-
-## ✨ Features│   └── results_screen.dart      # Analysis results display with heatmap
-
-
-
-### 🔬 Core Features## Usage├── services/
-
-
-
-- **Offline TB Detection**: Analyze chest X-rays without internet connectivity│   ├── image_service.dart       # Image picking and preprocessing (XFile-based)
-
-- **AI-Powered Analysis**: Uses EfficientNetV2 model trained on 100,000+ X-ray images
-
-- **Grad-CAM Heatmaps**: Visual explanation of AI predictions highlighting affected lung regions1. **Launch App**: Open Drishti TB AI│   ├── model_service.dart       # Mock TB detection model inference
-
-- **Risk Assessment**: Categorizes results as TB Positive, TB Suspected, or Normal/Low Risk
-
-- **Patient Management**: Complete patient registration and history tracking2. **Add Patient**: Enter patient name, age, gender, phone number│   ├── image_validator_service.dart  # X-ray validation heuristics
-
-- **PDF Reports**: Download detailed medical reports with heatmap visualizations
-
-3. **Upload X-ray**: Take photo or select from gallery│   ├── chatbot_service.dart     # Google Gemini AI chatbot integration
-
-### 🌐 Language Support
-
-4. **Wait for Analysis**: App analyzes X-ray (~40 seconds)│   └── report_service.dart      # Report generation and saving
-
-- **Bilingual Interface**: Seamlessly switch between English and Bengali
-
-- **Localized Content**: All UI elements, messages, and reports in both languages5. **View Results**: See TB probability, risk level, affected regions, heatmap├── widgets/
-
-
-
-### 🤖 AI Assistant6. **Download Report**: Save PDF report and heatmap image│   ├── loading_overlay.dart     # Loading animation overlay
-
-
-
-- **Gemini AI Integration**: Ask medical questions and get AI-powered responses│   └── floating_chat_widget.dart  # Floating AI chat assistant
-
-- **Context-Aware**: Understands TB-related medical queries
-
-- **Multilingual**: Responds in user's preferred language## System Requirements└── main.dart                    # App entry point
-
-
-
-### 📱 Additional Features
-
-
-
-- **Scan History**: Review past analyses and patient records- **Android**: Version 6.0 (Marshmallow) or higherassets/
-
-- **Dark/Light Mode**: Comfortable viewing in any lighting condition
-
-- **Secure Storage**: Patient data stored locally and securely- **iOS**: Version 12.0 or higher└── models/                      # Directory for future .tflite model
-
-- **Image Sources**: Capture from camera or select from gallery
-
-- **Storage**: 150 MB free space```
 
 ---
 
-- **RAM**: 2 GB minimum (4 GB recommended)
 
-## 📥 Download & Installation
+
+## ✨ Features## 🌟 About2. Enable "Install from Unknown Sources" in phone settingslib/
+
+
+
+- 🔬 **Offline TB Detection** - Works without internet connection
+
+- 🎯 **AI-Powered Analysis** - Uses EfficientNetV2 deep learning model
+
+- 🔥 **Grad-CAM Heatmaps** - Visual explanation highlighting affected lung areas**Drishti AI** is a revolutionary mobile application designed to address the tuberculosis (TB) diagnostic gap in Bangladesh and other resource-limited settings. The app provides **instant, offline chest X-ray analysis** using state-of-the-art deep learning technology, making TB screening accessible even in remote areas without internet connectivity.3. Install the APK├── l10n/
+
+- 📊 **Risk Assessment** - Classifies as TB Positive, TB Suspected, or Normal/Low Risk
+
+- 📄 **PDF Reports** - Download detailed medical reports with heatmap
+
+- 🌐 **Bilingual** - Full support for English and Bengali (বাংলা)
+
+- 🤖 **AI Assistant** - Ask medical questions using Gemini AI### Why Drishti AI?4. Grant camera and storage permissions when prompted│   ├── app_en.arb          # English translations
+
+- 📱 **Patient History** - Track and review past scans
+
+- 🔒 **Privacy** - All data stays on your device
+
+
+
+---- 🏥 **Accessibility**: Works completely offline - no internet required│   └── app_bn.arb          # Bengali translations
+
+
+
+## 📸 App Screenshots- ⚡ **Speed**: Get results in seconds, not days
+
+
+
+<div align="center">- 🎯 **Accuracy**: Powered by EfficientNetV2 deep learning model### iOS├── providers/
+
+
+
+### Home & Language Selection- 🌍 **Bilingual**: Supports English and Bengali (বাংলা)
+
+<img src="Screenshots/P1.jpg" width="250"/> <img src="Screenshots/P2.jpg" width="250"/>
+
+- 💰 **Free**: No cost for screening1. Download `Drishti-TB-AI.ipa` from releases│   └── language_provider.dart   # Language state management
+
+### Patient Registration & Scan Method
+
+<img src="Screenshots/P3.jpg" width="250"/> <img src="Screenshots/P4.jpg" width="250"/>- 📊 **Comprehensive**: Generates detailed PDF reports
+
+
+
+### Image Upload & AI Analysis- 🤖 **AI Assistant**: Integrated Gemini AI for medical queries2. Install using TestFlight or Xcode (requires developer account)├── screens/
+
+<img src="Screenshots/P5.jpg" width="250"/> <img src="Screenshots/P6.jpg" width="250"/>
+
+
+
+### Results & AI Assistant
+
+<img src="Screenshots/P7.jpg" width="250"/> <img src="Screenshots/P8.jpg" width="250"/>---3. Grant camera and photo library permissions when prompted│   ├── home_screen.dart         # Main screen with upload/capture options
+
+
+
+### History & Report Examples
+
+<img src="Screenshots/P9.jpg" width="250"/>
+
+## ✨ Features│   └── results_screen.dart      # Analysis results display with heatmap
+
+### PDF Report with Heatmap
+
+<img src="Screenshots/Result1.png" width="350"/> <img src="Screenshots/Result2.png" width="350"/>
+
+
+
+</div>### 🔬 Core Features## Usage├── services/
+
+
+
+---
+
+
+
+## 🎯 How to Use- **Offline TB Detection**: Analyze chest X-rays without internet connectivity│   ├── image_service.dart       # Image picking and preprocessing (XFile-based)
+
+
+
+1. **Launch the app** and choose your language (English or বাংলা)- **AI-Powered Analysis**: Uses EfficientNetV2 model trained on 100,000+ X-ray images
+
+2. **Register patient** details (Name, Age, Gender, Phone)
+
+3. **Capture or upload** a chest X-ray image- **Grad-CAM Heatmaps**: Visual explanation of AI predictions highlighting affected lung regions1. **Launch App**: Open Drishti TB AI│   ├── model_service.dart       # Mock TB detection model inference
+
+4. **Wait 30-40 seconds** for AI analysis
+
+5. **View results** with TB probability and heatmap visualization- **Risk Assessment**: Categorizes results as TB Positive, TB Suspected, or Normal/Low Risk
+
+6. **Download PDF report** for medical records
+
+- **Patient Management**: Complete patient registration and history tracking2. **Add Patient**: Enter patient name, age, gender, phone number│   ├── image_validator_service.dart  # X-ray validation heuristics
+
+---
+
+- **PDF Reports**: Download detailed medical reports with heatmap visualizations
+
+## 🛠️ Technical Details
+
+3. **Upload X-ray**: Take photo or select from gallery│   ├── chatbot_service.dart     # Google Gemini AI chatbot integration
+
+- **Platform:** Android 7.0+ (API Level 24+)
+
+- **AI Model:** EfficientNetV2 trained on 100,000+ chest X-rays### 🌐 Language Support
+
+- **Analysis Time:** 30-40 seconds (completely offline)
+
+- **Supported Formats:** PNG, JPEG, JPG4. **Wait for Analysis**: App analyzes X-ray (~40 seconds)│   └── report_service.dart      # Report generation and saving
+
+- **Languages:** English, Bengali (বাংলা)
+
+- **App Size:** 87.7 - 90.8 MB (depending on architecture)- **Bilingual Interface**: Seamlessly switch between English and Bengali
+
+
+
+---- **Localized Content**: All UI elements, messages, and reports in both languages5. **View Results**: See TB probability, risk level, affected regions, heatmap├── widgets/
+
+
+
+## ⚠️ Important Medical Disclaimer
+
+
+
+**This app is a screening tool, NOT a medical diagnostic device.**### 🤖 AI Assistant6. **Download Report**: Save PDF report and heatmap image│   ├── loading_overlay.dart     # Loading animation overlay
+
+
+
+- ⚕️ Always consult qualified healthcare professionals
+
+- 🏥 Results must be verified by radiologists/doctors
+
+- ❌ Not FDA-approved or medically certified- **Gemini AI Integration**: Ask medical questions and get AI-powered responses│   └── floating_chat_widget.dart  # Floating AI chat assistant
+
+- 📋 Use for educational and preliminary screening only
+
+- ⚠️ False positives and false negatives may occur- **Context-Aware**: Understands TB-related medical queries
+
+
+
+---- **Multilingual**: Responds in user's preferred language## System Requirements└── main.dart                    # App entry point
+
+
+
+## 👥 Development Team
+
+
+
+This app was developed by:### 📱 Additional Features
+
+
+
+### Lead Developer
+
+**MD HASIB ULLAH KHAN ALVIE**
+
+- 📧 Email: mdhasibullahkhanalvie@gmail.com- **Scan History**: Review past analyses and patient records- **Android**: Version 6.0 (Marshmallow) or higherassets/
+
+- 📱 Phone: 01731683436
+
+- **Dark/Light Mode**: Comfortable viewing in any lighting condition
+
+### Co-Developer
+
+**SIBGATULLAH TASNIM**- **Secure Storage**: Patient data stored locally and securely- **iOS**: Version 12.0 or higher└── models/                      # Directory for future .tflite model
+
+- 🐙 GitHub: [@py428](https://github.com/py428)
+
+- 📱 Phone: 01740742666- **Image Sources**: Capture from camera or select from gallery
+
+
+
+---- **Storage**: 150 MB free space```
+
+
+
+## 📜 License---
+
+
+
+This project is licensed under the MIT License.- **RAM**: 2 GB minimum (4 GB recommended)
+
+
+
+```## 📥 Download & Installation
+
+MIT License
 
 ## Setup Instructions
 
+Copyright (c) 2025 MD Hasib Ullah Khan Alvie & Sibgatullah Tasnim
+
 ### Step 1: Download the APK
 
-## Offline Mode
+Permission is hereby granted, free of charge, to any person obtaining a copy
 
-Choose the APK file based on your device architecture:
+of this software and associated documentation files (the "Software"), to deal## Offline Mode
+
+in the Software without restriction, including without limitation the rights
+
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sellChoose the APK file based on your device architecture:
+
+copies of the Software, subject to the following conditions:
 
 ### Prerequisites
 
-| Device Type | APK File | Size | Download |
+The above copyright notice and this permission notice shall be included in all
 
-|------------|----------|------|----------|The app works completely offline:- Flutter SDK 3.0.0 or higher
+copies or substantial portions of the Software.| Device Type | APK File | Size | Download |
 
-| **Most Modern Phones** (Recommended) | `app-arm64-v8a-release.apk` | 89.7 MB | [📥 Download](https://github.com/Nicgott99/Drishti-Ai-App/releases/latest/download/app-arm64-v8a-release.apk) |
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR|------------|----------|------|----------|The app works completely offline:- Flutter SDK 3.0.0 or higher
+
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.| **Most Modern Phones** (Recommended) | `app-arm64-v8a-release.apk` | 89.7 MB | [📥 Download](https://github.com/Nicgott99/Drishti-Ai-App/releases/latest/download/app-arm64-v8a-release.apk) |
+
+```
 
 | Older 32-bit Devices | `app-armeabi-v7a-release.apk` | 87.7 MB | [📥 Download](https://github.com/Nicgott99/Drishti-Ai-App/releases/latest/download/app-armeabi-v7a-release.apk) |- No internet connection required- Dart SDK
 
+---
+
 | Emulators/Intel Devices | `app-x86_64-release.apk` | 90.8 MB | [📥 Download](https://github.com/Nicgott99/Drishti-Ai-App/releases/latest/download/app-x86_64-release.apk) |
+
+## 🌟 Acknowledgments
 
 - All analysis happens on-device- Android Studio / VS Code with Flutter extensions
 
-> 💡 **Not sure which one?** Download `app-arm64-v8a-release.apk` - it works on most modern Android phones.
+- **Dataset Sources:** NIH Chest X-ray Dataset, TBX11K, TB Chest Radiography Database
 
-- Data never leaves your phone
+- **AI Framework:** PyTorch, Flutter> 💡 **Not sure which one?** Download `app-arm64-v8a-release.apk` - it works on most modern Android phones.
 
-### Step 2: Enable Installation from Unknown Sources
+- **AI Assistant:** Google Gemini AI
 
-- Privacy-first design### Installation
-
-Since this app is not from the Google Play Store, you need to enable installation from unknown sources:
+- **Inspiration:** Addressing the TB diagnostic gap in Bangladesh- Data never leaves your phone
 
 
+
+---### Step 2: Enable Installation from Unknown Sources
+
+
+
+## 📞 Support- Privacy-first design### Installation
+
+
+
+For questions, issues, or feedback:Since this app is not from the Google Play Store, you need to enable installation from unknown sources:
+
+
+
+- 📧 Email: mdhasibullahkhanalvie@gmail.com
+
+- 🐙 GitHub Issues: [Report a bug or suggest a feature](https://github.com/Nicgott99/Drishti-Ai-App/issues)
 
 #### For Android 8.0 and above:
 
+---
+
 ## Medical Disclaimer1. **Install dependencies**:
+
+## 🔄 Version History
 
 1. Go to **Settings** → **Security & Privacy** (or **Apps & Notifications**)
 
-2. Tap on **Install unknown apps** (or **Special app access**)   ```bash
+**v1.0.0** (November 13, 2025)
 
-3. Select your **browser** or **file manager** (whichever you used to download)
+- Initial release2. Tap on **Install unknown apps** (or **Special app access**)   ```bash
 
-4. Enable **Allow from this source**This app is a **screening tool**, not a diagnostic device. Always consult qualified healthcare professionals for diagnosis and treatment. Do not rely solely on this app for medical decisions.   flutter pub get
+- Offline TB detection with AI
+
+- Grad-CAM++ heatmap visualization3. Select your **browser** or **file manager** (whichever you used to download)
+
+- Bilingual support (English/Bengali)
+
+- PDF report generation4. Enable **Allow from this source**This app is a **screening tool**, not a diagnostic device. Always consult qualified healthcare professionals for diagnosis and treatment. Do not rely solely on this app for medical decisions.   flutter pub get
+
+- AI assistant integration
 
 
+
+---
 
 #### For Android 7.1 and below:   ```
 
+<div align="center">
 
+
+
+**Made with ❤️ for Bangladesh**
 
 1. Go to **Settings** → **Security**## Support
 
+*Empowering healthcare through AI*
+
 2. Enable **Unknown sources**
+
+---
 
 3. Tap **OK** on the warning message2. **Generate localization files**:
 
+If you find this app useful, please ⭐ star this repository!
 
+
+
+</div>
 
 ### Step 3: Install the App- **Technical Issues**: Open an issue on GitHub   ```bash
 

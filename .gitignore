@@ -1,14 +1,25 @@
-# Miscellaneous
+# Drishti AI - Keep only APK files and screenshots# Miscellaneous
+
 *.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
+
+# Include only these*.log
+
+!APK/*.pyc
+
+!APK/*.apk*.swp
+
+!Screenshots/.DS_Store
+
+!Screenshots/*.jpg.atom/
+
+!Screenshots/*.png.buildlog/
+
+!README.md.history
+
+!LICENSE.svn/
+
+!.gitignoremigrate_working_dir/
+
 
 # IntelliJ related
 *.iml
