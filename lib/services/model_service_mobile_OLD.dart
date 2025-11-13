@@ -735,12 +735,12 @@ class ModelService {
     return masked;
   }
 
-  /// STEP 7: Apply MEDICAL JET COLORMAP with BIG EGG-SHAPED overlay
+  /// STEP 7: Apply MEDICAL JET COLORMAP (OpenCV cv2.COLORMAP_JET exact replica)
   img.Image _applyMedicalJetColormap(img.Image original, List<List<double>> attention, int width, int height) {
-    // Create heatmap as a copy of original X-ray
+    // Create a proper copy of the original image (not shallow copy)
     final heatmap = img.Image(width: width, height: height);
     
-    // Copy ALL pixels from original X-ray (this ensures X-ray is always visible)
+    // Copy all pixels from original
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
         final pixel = original.getPixel(x, y);
@@ -748,79 +748,60 @@ class ModelService {
       }
     }
     
-    // Define BIG EGG-SHAPED region in center of chest
-    final centerX = width / 2.0;
-    final centerY = height * 0.45;  // Slightly above center (chest region)
-    final eggWidth = width * 0.5;   // Big egg - 50% of image width
-    final eggHeight = height * 0.6; // Big egg - 60% of image height
+    // FIXED alpha (same as web version: 0.5)
+    const double alpha = 0.5;
     
-    // Alpha for blending (0.4 = 40% heatmap + 60% X-ray, more subtle)
-    const double alpha = 0.4;
-    
-    // Apply gradient overlay to the EGG region
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
-        // Calculate elliptical distance from center
-        final dx = (x - centerX) / eggWidth;
-        final dy = (y - centerY) / eggHeight;
-        final distance = math.sqrt(dx * dx + dy * dy);
+        final value = attention[y][x];
         
-        // Only apply color inside the egg (distance < 1.0)
-        if (distance < 1.0) {
-          // Create radial gradient from center to edge
-          // Center = hot (red), Edge = cool (blue)
-          final value = 1.0 - distance;  // 1.0 at center, 0.0 at edge
-          
-          // Also use the attention map value to modulate intensity
-          final attentionValue = attention[y][x];
-          final combinedValue = (value * 0.7 + attentionValue * 0.3).clamp(0.0, 1.0);
-          
-          // Get original pixel
-          final originalPixel = original.getPixel(x, y);
-          
-          // OpenCV COLORMAP_JET: blue → cyan → green → yellow → orange → red
-          int r, g, b;
-          
-          if (combinedValue < 0.125) {
-            // Dark blue
-            final t = combinedValue / 0.125;
-            r = 0;
-            g = 0;
-            b = (128 + t * 127).toInt();
-          } else if (combinedValue < 0.375) {
-            // Blue to Cyan
-            final t = (combinedValue - 0.125) / 0.25;
-            r = 0;
-            g = (t * 255).toInt();
-            b = 255;
-          } else if (combinedValue < 0.625) {
-            // Cyan to Yellow
-            final t = (combinedValue - 0.375) / 0.25;
-            r = (t * 255).toInt();
-            g = 255;
-            b = ((1 - t) * 255).toInt();
-          } else if (combinedValue < 0.875) {
-            // Yellow to Orange/Red
-            final t = (combinedValue - 0.625) / 0.25;
-            r = 255;
-            g = ((1 - t) * 255).toInt();
-            b = 0;
-          } else {
-            // Red (hot center)
-            final t = (combinedValue - 0.875) / 0.125;
-            r = (255 - t * 50).toInt();  // Slight darkening
-            g = 0;
-            b = 0;
-          }
-          
-          // Alpha blending: blend heatmap color with original X-ray
-          final blendedR = ((1 - alpha) * originalPixel.r + alpha * r).toInt().clamp(0, 255);
-          final blendedG = ((1 - alpha) * originalPixel.g + alpha * g).toInt().clamp(0, 255);
-          final blendedB = ((1 - alpha) * originalPixel.b + alpha * b).toInt().clamp(0, 255);
-          
-          heatmap.setPixelRgba(x, y, blendedR, blendedG, blendedB, 255);
+        // Skip very low activation (less than 5%)
+        if (value < 0.05) continue;
+        
+        final originalPixel = original.getPixel(x, y);
+        
+        // OpenCV COLORMAP_JET exact implementation
+        // Maps [0,1] to colors: dark blue → cyan → yellow → orange → red
+        int r, g, b;
+        
+        if (value < 0.125) {
+          // Dark blue (128,0,0) to Blue (255,0,0)
+          final t = value / 0.125;
+          r = 0;
+          g = 0;
+          b = (128 + t * 127).toInt();
+        } else if (value < 0.375) {
+          // Blue (255,0,0) to Cyan (255,255,0)
+          final t = (value - 0.125) / 0.25;
+          r = 0;
+          g = (t * 255).toInt();
+          b = 255;
+        } else if (value < 0.625) {
+          // Cyan (255,255,0) to Yellow (255,255,0) to Green/Yellow
+          final t = (value - 0.375) / 0.25;
+          r = (t * 255).toInt();
+          g = 255;
+          b = ((1 - t) * 255).toInt();
+        } else if (value < 0.875) {
+          // Yellow/Orange (255,255,0) to Red (255,0,0)
+          final t = (value - 0.625) / 0.25;
+          r = 255;
+          g = ((1 - t) * 255).toInt();
+          b = 0;
+        } else {
+          // Red (255,0,0) to Dark Red (128,0,0)
+          final t = (value - 0.875) / 0.125;
+          r = (255 - t * 127).toInt();
+          g = 0;
+          b = 0;
         }
-        // Pixels outside egg stay as original X-ray (already copied above)
+        
+        // Alpha blending: 50% heatmap + 50% original (standard medical imaging)
+        final blendedR = ((1 - alpha) * originalPixel.r + alpha * r).toInt().clamp(0, 255);
+        final blendedG = ((1 - alpha) * originalPixel.g + alpha * g).toInt().clamp(0, 255);
+        final blendedB = ((1 - alpha) * originalPixel.b + alpha * b).toInt().clamp(0, 255);
+        
+        heatmap.setPixelRgba(x, y, blendedR, blendedG, blendedB, 255);
       }
     }
     
